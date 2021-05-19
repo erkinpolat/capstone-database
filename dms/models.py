@@ -8,7 +8,7 @@ Students
 Alumni (a way to get the students to move to alumni every year)
 '''
 
-class StudentSenior(models.Model):
+class StudentJunior(models.Model):
 	first_name = models.CharField(max_length=100)
 	last_name = models.CharField(max_length=100)
 	email = models.EmailField()
@@ -44,7 +44,7 @@ class StudentSenior(models.Model):
 			self.slug = slugify(self.first_name + self.last_name)
 		super().save(*args, **kwargs)
 
-	
+
 
 
 
