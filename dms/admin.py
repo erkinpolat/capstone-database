@@ -5,5 +5,5 @@ from .models import StudentJunior
 
 @admin.register(StudentJunior)
 class StudentJuniorAdmin(admin.ModelAdmin):
-	list_display = ['first_name', 'last_name', 'email']
-	list_filter = ['created']
+	list_display = ['name', 'email']
+	list_filter = ['name']

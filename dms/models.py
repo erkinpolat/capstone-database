@@ -9,9 +9,9 @@ Alumni (a way to get the students to move to alumni every year)
 '''
 
 class StudentJunior(models.Model):
-	first_name = models.CharField(max_length=100)
-	last_name = models.CharField(max_length=100)
+	timestamp = models.CharField(max_length=200)
 	email = models.EmailField()
+	name = models.CharField(max_length=200)
 	collegeMajor = models.CharField(max_length=50)
 	primaryConc = models.CharField(max_length=100)
 	secondMajor = models.CharField(max_length=50, blank=True)
@@ -34,14 +34,14 @@ class StudentJunior(models.Model):
 	created = models.DateField(auto_now_add=True, db_index=True)
 
 	def __str__(self):
-		return self.first_name + ' ' + self.last_name
+		return self.name
 
 	def save(self, *args, **kwargs):
 		'''
 		Upon saving a slug is created
 		'''
 		if not self.slug:
-			self.slug = slugify(self.first_name + self.last_name)
+			self.slug = slugify(self.name)
 		super().save(*args, **kwargs)
 
 
