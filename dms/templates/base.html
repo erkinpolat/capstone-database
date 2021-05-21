@@ -11,7 +11,9 @@
         {% block sidebar %}
         <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="{% url 'dms:database-juniors' %}">Juniors</a></li>
             <li><a href="{% url 'dms:database-faculty' %}">Faculty</a></li>
+
 
         </ul>
         {% endblock %}

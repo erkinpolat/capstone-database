@@ -16,5 +16,5 @@ def faculty(request):
 def studentJunior(request):
 	students=StudentJunior.objects.all()
 
-	return render(request, 'dms/juniors.html', {'faculty': students})
+	return render(request, 'dms/juniors.html', {'students': students})
 

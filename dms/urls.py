@@ -6,4 +6,5 @@ app_name = 'dms'
 urlpatterns = [
     path('', views.home, name="database-home"),
     path('faculty/', views.faculty, name="database-faculty"),
+    path('juniors/', views.studentJunior, name="database-juniors"),
 ]
