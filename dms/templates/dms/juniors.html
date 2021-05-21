@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Juniors{% endblock %}
+
+{% block content %} 
+
+
+	This is the faculty page 
+
+	<table style="width:100%">
+		<tr> 
+			<th>Timestamp</th>
+			<th>Email Address</th>
+			<th>Name</th>
+			<th>College of your primary major</th>
+			<th>"Primary" concentration</th>
+			<th>Second Major</th>
+			<th>Second concentration</th>
+			<th>Custom / special concentration(s)</th>
+			<th>Minor</th>
+			<th>Minor concentration</th>
+			<th>Knowledge / skill-sharing to offer</th>
+			<th>Knowledge / skill-sharing request</th>
+			<th>Section</th>
+			<th>Where are you located this semester?</th>
+			<th>Current top independent project idea</th>
+			<th>Degree of commitment to this project</th>
+			<th>Project features</th>
+			<th>Other project idea(s)</th>
+			<th>External dependencies</th>
+			<th>HSR Committee review status</th>
+			<th>Relevant skills & content knowledge</th>
+		</tr>
+
+		{% for item in students %}
+		    <tr> 
+		    	<td>{{ item.timestamp }} </td>
+		    	<td>{{ item.email }} </td>
+		    	<td>{{ item.name }} </td>
+		    	<td>{{ item.collegeMajor }} </td>
+		    	<td>{{ item.primaryConc }} </td>
+		    	<td>{{ item.secondMajor }} </td>
+		    	<td>{{ item.secondConc }} </td>
+		    	<td>{{ item.customConc }} </td>
+		    	<td>{{ item.minor }} </td>
+		    	<td>{{ item.minorConc }} </td>
+		    	<td>{{ item.knowledge2Offer }} </td>
+		    	<td>{{ item.knowledge2Request }} </td>
+		    	<td>{{ item.section }} </td>
+		    	<td>{{ item.location }} </td>
+		    	<td>{{ item.topProjectIdea }} </td>
+		    	<td>{{ item.degreeCommitment }} </td>
+		    	<td>{{ item.projectFeatures }} </td>
+		    	<td>{{ item.otherProjectIdeas }} </td>
+		    	<td>{{ item.externalDependencies }} </td>
+		    	<td>{{ item.hsrReview }} </td>
+		    	<td>{{ item.relevantSkills }} </td>
+		    </tr>
+	    {% endfor %}
+	</table>
+
+{% endblock %}

@@ -11,3 +11,10 @@ def faculty(request):
 	faculty=Faculty.objects.all()
 
 	return render(request, 'dms/faculty.html', {'faculty': faculty})
+
+
+def studentJunior(request):
+	students=StudentJunior.objects.all()
+
+	return render(request, 'dms/juniors.html', {'faculty': students})
+
