@@ -4,4 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-	return HttpResponse('<h1> Welcome </h1>')
+	return render(request, 'dms/home.html')
+
+def faculty(request):
+	return render(request, 'dms/faculty.html')
