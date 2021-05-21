@@ -7,6 +7,34 @@
 
 	This is the faculty page 
 
-	
+	<table style="width:100%">
+		<tr> 
+			<th>Email Address</th>
+			<th>Name</th>
+			<th>College(s)</th>
+			<th>Courses taught at Minerva</th>
+			<th>Courses taught elsewhere</th>
+			<th>Overview of expertise and experience</th>
+			<th>Expertise and experience - keywords</th>
+			<th>Additional areas of interest</th>
+			<th>Link(s) to additional relevant information </th>
+			<th>Courses at Minerva that are within your domain of expertise (*numbers only*)</th>
+		</tr>
+
+		{% for item in faculty %}
+		    <tr> 
+		    	<td>{{ item.email }}</td>
+		    	<td>{{ item.name }}</td>
+		    	<td>{{ item.colleges }}</td>
+		    	<td>{{ item.coursesMinerva }}</td>
+		    	<td>{{ item.coursesElsewhere }}</td>
+		    	<td>{{ item.overviewExpertise }}</td>
+		    	<td>{{ item.expertiseKeywords }}</td>
+		    	<td>{{ item.additionalInterest }}</td>
+		    	<td>{{ item.links }}</td>
+		    	<td>{{ item.coursesDomainExpertise }}</td>
+		    </tr>
+	    {% endfor %}
+	</table>
 
 {% endblock %}
